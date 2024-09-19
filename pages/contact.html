@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-white to-yellow-100 p-4 md:p-8">
+    <header class="flex justify-between items-center mb-8">
+        <div class="flex items-center">
+            <div class="w-8 h-8 bg-yellow-400 rounded-full mr-2"></div>
+            <span class="text-xl font-semibold transform transition-transform duration-300 ease-in-out hover:scale-110">Alfie</span>
+        </div>
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-black focus:outline-none">
+               
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <nav id="menu" class="md:flex space-x-6">
+            <ul class="flex flex-col md:flex-row md:space-x-6">
+                <li><a href="index.html" class="font-medium hover:underline">Home</a></li>
+                <li><a href="gallery.html" class="text-gray-500 hover:underline">Gallery</a></li>
+                <li><a href="career-goals.html" class="text-gray-500 hover:underline">Career Goals</a></li>
+                <li><a href="projects.html" class="text-gray-500 hover:underline">Projects</a></li>
+                <li><a href="skills-interests.html" class="text-gray-500 hover:underline">Skills & Interests</a></li>
+                <li><a href="contact.html" class="text-gray-500 hover:underline">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="contact" class="mb-12">
+           
+        <div class="bg-yellow-300 rounded-3xl p-6 space-y-6">
+            <h1 class="text-4xl font-bold leading-tight">
+                Contact Us ?
+             </h1>
+            <form action="https://formspree.io/f/xjkbdwvq" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-900">Name</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 rounded-md">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-900">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 rounded-md">
+                </div>
+                <div>
+                    <label for="subject" class="block text-gray-900">Subject</label>
+                    <input type="text" id="subject" name="subject" class="w-full p-2 rounded-md">
+                </div>
+                <div>
+                    <label for="message" class="block text-gray-900">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 rounded-md"></textarea>
+                </div>
+                <button type="submit" class="bg-gray-900 text-white px-6 py-3 rounded-full  transform transition-transform duration-300 ease-in-out hover:scale-110">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="grid md:grid-cols-1 my-8 gap-8 mb-12">
+            <div class="bg-yellow-300 rounded-3xl p-6 relative overflow-hidden space-y-6">
+                <h1 class="text-4xl font-bold leading-tight">
+                   Want to work together ?
+                </h1>
+                <p class="text-gray-900">
+                    Feel free to reachout at rehmanaltaf290@gmail.com
+                </p>
+                <div class="space-y-4">
+                    <div class="flex space-x-4">
+                        <button class="bg-gray-900 text-white px-6 py-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110">
+                            Contact Me
+                          </button>
+                          <a href="https://www.facebook.com/arien.altaf.1" target="_blank" class="group">
+                            <img src="/icons/icons8-facebook (1).svg"  alt="" class=" transition-transform duration-300 ease-in-out transform group-hover:scale-110">
+                          </a>
+                          <a href="https://www.instagram.com/ill_taf/" target="_blank" class="group">
+                            <img src="/icons/icons8-instagram.svg" alt="" class=" transition-transform duration-300 ease-in-out transform group-hover:scale-110">
+                          </a>
+                          <a href="https://www.linkedin.com/in/altaf-rehman-351847310/" target="_blank" class="group">
+                            <img src="/icons/icons8-linkedin.svg" alt="" class=" transition-transform duration-300 ease-in-out transform group-hover:scale-110">
+                          </a>
+                          <a href="#" class="group" target="_blank">
+                            <img src="/icons/icons8-twitter.svg" alt=""  class=" transition-transform duration-300 ease-in-out transform group-hover:scale-110">
+                          </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script>
+    // JavaScript for navbar on small screens
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+</html>
